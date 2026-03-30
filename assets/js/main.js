@@ -1,4 +1,6 @@
 (function () {
+  document.documentElement.classList.add("js");
+
   const yearTarget = document.getElementById("current-year");
   const menuToggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
