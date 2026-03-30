@@ -13,7 +13,7 @@ Each tool should have its own subdirectory with a focused scope and its own READ
 - document usage and limitations clearly
 - prefer maintainable implementation over over-engineering
 
-Current placeholders:
+Current status:
 
-- `tool-01/`
-- `tool-02/`
+- `tool-01/` — working IOC extractor utility
+- `tool-02/` — reserved placeholder for the next lightweight utility

@@ -1,0 +1,3 @@
+2026-03-30T14:22:10Z src=8.8.8.8 dst=10.0.1.9 action=blocked domain=malicious-updates.example payload_hash=44d88612fea8a8f36de82e1278abb02f
+2026-03-30T14:22:16Z src=1.1.1.1 dst=10.0.1.9 action=blocked domain=cdn.badactor-control.net
+2026-03-30T14:24:02Z process=powershell.exe url=http://dropper.badactor-control.net stage_hash=3395856ce81f2b7382dee72602f798b642f14140

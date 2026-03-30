@@ -1,0 +1,11 @@
+# IOC Extraction Summary
+ips: 2
+  - 1.1.1.1
+  - 8.8.8.8
+domains: 3
+  - cdn.badactor-control.net
+  - dropper.badactor-control.net
+  - malicious-updates.example
+hashes: 2
+  - 3395856ce81f2b7382dee72602f798b642f14140
+  - 44d88612fea8a8f36de82e1278abb02f
