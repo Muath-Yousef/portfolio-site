@@ -1,0 +1,31 @@
+name: Repository Hygiene
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  hygiene:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check for common unwanted artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          banned_patterns='(\.DS_Store$|Thumbs\.db$|~$|\.swp$|\.tmp$|\.bak$|^npm-debug\.log$|^yarn-error\.log$|^\.env$|^\.env\..+)'
+          if git ls-files | grep -E "$banned_patterns"; then
+            echo "Found tracked files that should not be committed."
+            exit 1
+          fi
+
+      - name: Ensure markdown templates exist
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f .github/pull_request_template.md
+          test -f .github/ISSUE_TEMPLATE/bug_report.md
+          test -f .github/ISSUE_TEMPLATE/feature_request.md
