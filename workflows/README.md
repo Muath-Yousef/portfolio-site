@@ -21,3 +21,7 @@ Store workflow artifacts that define:
 ## Expected Evolution
 
 As implementation matures, this folder should contain versioned workflow specifications and supporting references mapped to concrete SOC use cases.
+
+## Current baseline workflow
+
+- `detection-triage-workflow.md`: initial SOC-oriented flow that references `tools/tool-01/ioc_extractor.py` for IOC extraction during triage.
