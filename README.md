@@ -1,66 +1,78 @@
-# Security Workflows
+# Security Tools
 
-This repository is intended to hold practical security engineering artifacts for workflow, pipeline, and automation-focused operations.
+This repository is a disciplined workspace for building lightweight, practical tools that support real security and technical operations.
 
-## Purpose
+## What this repository is for
 
-Security teams handle repetitive, time-sensitive tasks across detection, triage, investigation, and response. This repository provides a disciplined place to design and maintain:
+`security-tools` is intended for small, focused utilities that solve repeat operational problems without introducing unnecessary complexity.
 
-- security automation workflows
-- detection and enrichment logic
-- response-oriented playbooks
-- pipeline building blocks for SOC/SIEM/SOAR operations
+Typical use cases include:
 
-The objective is to improve operational consistency, reduce manual overhead, and make response actions auditable and repeatable.
+- analyst and operator helper scripts
+- triage and investigation support utilities
+- repeatable command-line workflows
+- small automation tasks that remove manual overhead
 
-## Why Workflow and Pipeline Engineering Matters
+## Why lightweight tools matter
 
-Modern security operations require more than individual scripts. Effective operations depend on structured workflows that define:
+In real operations, teams frequently need fast, reliable helpers more than large platforms. Lightweight tools are valuable because they are:
 
-1. **Inputs** (alerts, telemetry, cases, indicators)
-2. **Decision points** (severity checks, confidence thresholds, routing rules)
-3. **Actions** (containment, escalation, ticketing, evidence collection)
-4. **Outputs** (updated case state, documented findings, measurable outcomes)
+- easy to understand and review
+- fast to adapt to changing operational needs
+- simple to run in constrained environments
+- maintainable by small teams
 
-Pipeline-oriented engineering enables these steps to be versioned, reviewed, tested, and improved over time.
+The goal is practical usefulness, not framework-heavy architecture.
 
-## Repository Structure
+## Repository structure
 
 ```text
-security-workflows/
+security-tools/
 ├── README.md
-├── workflows/
-│   └── README.md
-├── playbooks/
-│   └── README.md
-├── pipelines/
+├── tools/
+│   ├── README.md
+│   ├── tool-01/
+│   │   └── README.md
+│   └── tool-02/
+│       └── README.md
+├── shared/
 │   └── README.md
 ├── docs/
 │   ├── overview.md
-│   ├── workflow-patterns.md
-│   └── operating-model.md
+│   ├── usage-model.md
+│   └── design-principles.md
 └── assets/
 ```
 
-## Intended Content Categories
+## What kinds of tools belong here
 
-- **Workflows**: event-driven process definitions, orchestration logic, and step sequencing.
-- **Playbooks**: operational procedures for common incidents and investigation patterns.
-- **Pipelines**: automation stages for data ingestion, normalization, enrichment, and action execution.
-- **Documentation**: architecture decisions, operating assumptions, governance, and implementation guidance.
-- **Assets**: diagrams or supporting non-code material used by docs and operational references.
+This repository should contain tools that are:
 
-## Connection to Security Operations
+- narrowly scoped and outcome-driven
+- usable from real operator workflows
+- clear in behavior and assumptions
+- testable and maintainable over time
 
-This repository is designed to align with real SOC operating needs:
+Examples of acceptable scope:
 
-- SIEM-centric alert handling and triage paths
-- SOAR-aligned decision automation and response actions
-- incident lifecycle support from detection through closure
-- controlled handoffs between automation and analyst judgment
+- log or artifact parsing helpers
+- IOC/indicator processing utilities
+- incident response support scripts
+- environment validation and hygiene checks
 
-## Current Maturity and Direction
+## Shared area purpose
 
-Current status: **foundational structure and documentation baseline**.
+The `shared/` area is for reusable components that can be safely used by multiple tools, such as:
 
-This repository does **not** claim a complete production automation platform at this stage. The near-term direction is to incrementally add validated workflow definitions, playbook content, and pipeline implementations with clear operational ownership and review practices.
+- common parsing helpers
+- reusable data models
+- consistent output/formatting helpers
+- utility functions with cross-tool value
+
+This area should remain minimal, stable, and well-documented to avoid accidental coupling.
+
+## Current maturity and direction
+
+Current status: **foundational repository structure with documentation baseline**.
+
+This repository is intentionally at an early stage. It is prepared for future real tools, not populated with fake mature projects. Next development should focus on adding validated, field-useful utilities one by one with clear documentation and maintenance expectations.
