@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Muath Yousef — Cybersecurity Engineer available for security automation, pipeline, and tooling engagements." />
+  <title>Contact — Muath Yousef</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand"><span>MY</span> / Muath Yousef</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Page header -->
+    <div class="page-header">
+      <div class="container">
+        <h1>Contact</h1>
+        <p class="subtitle">For engagements, questions, or direct communication.</p>
+      </div>
+    </div>
+
+    <!-- Contact grid -->
+    <section>
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Info side -->
+          <div class="contact-info">
+            <h3>Get in touch</h3>
+            <p>
+              Use the form to start a conversation about an engagement,
+              a specific project, or any direct inquiry. I respond to
+              serious messages; I do not respond to mass outreach or
+              unsolicited sales.
+            </p>
+
+            <p>
+              If email is more straightforward, use the address below.
+              For anything sensitive, please indicate that in your initial
+              message and we can arrange a more secure channel.
+            </p>
+
+            <ul class="contact-link-list">
+              <li>
+                <a href="mailto:hello@muathyousef.com">
+                  ✉ hello@muathyousef.com
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/muathyousef" target="_blank" rel="noopener noreferrer">
+                  ↗ LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Muath-Yousef" target="_blank" rel="noopener noreferrer">
+                  ↗ GitHub
+                </a>
+              </li>
+            </ul>
+
+            <hr class="divider" />
+            <p class="text-muted" style="font-size:0.825rem;">
+              Response time is typically within 2 business days.
+              Engagements require a brief discovery call before any
+              work is scoped or agreed.
+            </p>
+          </div>
+
+          <!-- Form side -->
+          <div>
+            <!--
+              To activate form submission, replace action="#" with a
+              Formspree endpoint or your own backend URL.
+              e.g. action="https://formspree.io/f/YOUR_FORM_ID"
+            -->
+            <form
+              id="contact-form"
+              class="contact-form"
+              action="#"
+              method="POST"
+              novalidate
+            >
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                  autocomplete="email"
+                />
+              </div>
+
+              <div class="form-field">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Select a topic</option>
+                  <option value="engagement">Engagement / Project</option>
+                  <option value="question">General Question</option>
+                  <option value="advisory">Advisory / Consulting</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="Briefly describe what you need and any relevant context."
+                  required
+                ></textarea>
+              </div>
+
+              <div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+                <p id="form-message" class="form-note" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-brand">Muath Yousef</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="about.html">About</a>
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
