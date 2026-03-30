@@ -1,25 +1,11 @@
 # Overview
 
-## Objective
+`security-tools` is a practical repository for lightweight utilities that support real security and technical workflows.
 
-The `security-workflows` repository establishes a maintainable foundation for security operations engineering centered on workflows, playbooks, and pipelines.
+The repository is designed to reduce repetitive manual effort through small, clear, maintainable tools.
 
-## Problem Space
+It intentionally prioritizes:
 
-Security operations environments often accumulate fragmented scripts and undocumented procedures. This creates inconsistent outcomes, weak auditability, and slow response cycles.
-
-This repository addresses that gap by organizing security automation artifacts into clear, reviewable domains.
-
-## What This Repository Will Hold
-
-- workflow specifications for event-to-action orchestration
-- playbooks for repeatable analyst and responder procedures
-- pipeline designs for ingestion, enrichment, decision, and action stages
-- supporting operational documentation and reference assets
-
-## Design Intent
-
-- prioritize operational clarity over complexity
-- enable incremental build-out without premature abstraction
-- keep assumptions explicit and maintainable
-- support collaboration between engineering and SOC operations
+- clarity over abstraction
+- operational utility over broad platform claims
+- incremental delivery of validated tools
