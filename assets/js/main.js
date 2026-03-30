@@ -73,7 +73,7 @@
       var btn = form.querySelector('button[type="submit"]');
       if (btn) {
         btn.disabled = true;
-        btn.textContent = 'Sending\u2026';
+        btn.textContent = 'Sending…';
       }
 
       /* Encode form data for Formspree / similar endpoint */
