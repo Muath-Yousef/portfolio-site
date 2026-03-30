@@ -1,18 +1,37 @@
-/* ============================================================
-   Portfolio Site — Main JS
-   Minimal progressive enhancement only.
-   ============================================================ */
-
 (function () {
   'use strict';
 
-  /* ----- Mobile nav toggle ----- */
-  const toggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  /* ----- Progressive enhancement: add .js class to <html> ----- */
+  document.documentElement.classList.add('js');
+
+  /* ----- Footer year ----- */
+  var yearTarget = document.getElementById('current-year');
+  if (yearTarget) {
+    yearTarget.textContent = String(new Date().getFullYear());
+  }
+
+  /* ----- Mobile nav toggle (single-page: .menu-toggle / .site-nav) ----- */
+  var menuToggle = document.querySelector('.menu-toggle');
+  var siteNav = document.querySelector('.site-nav');
+
+  if (menuToggle && siteNav) {
+    menuToggle.addEventListener('click', function () {
+      var isOpen = siteNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute(
+        'aria-label',
+        isOpen ? 'Close navigation' : 'Open navigation'
+      );
+    });
+  }
+
+  /* ----- Mobile nav toggle (multi-page: .nav-toggle / .nav-links) ----- */
+  var toggle = document.querySelector('.nav-toggle');
+  var navLinks = document.querySelector('.nav-links');
 
   if (toggle && navLinks) {
     toggle.addEventListener('click', function () {
-      const isOpen = navLinks.classList.toggle('open');
+      var isOpen = navLinks.classList.toggle('open');
       toggle.classList.toggle('open', isOpen);
       toggle.setAttribute('aria-expanded', String(isOpen));
     });
@@ -27,12 +46,12 @@
     });
   }
 
-  /* ----- Active nav link based on current page ----- */
+  /* ----- Active nav link based on current page (multi-page) ----- */
   (function setActiveLink() {
-    const path = window.location.pathname;
-    const page = path.split('/').pop() || 'index.html';
+    var path = window.location.pathname;
+    var page = path.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav-links a').forEach(function (a) {
-      const href = a.getAttribute('href');
+      var href = a.getAttribute('href');
       if (
         href === page ||
         (page === '' && href === 'index.html') ||
@@ -44,22 +63,22 @@
   })();
 
   /* ----- Contact form: basic client-side handling ----- */
-  const form = document.getElementById('contact-form');
-  const formMsg = document.getElementById('form-message');
+  var form = document.getElementById('contact-form');
+  var formMsg = document.getElementById('form-message');
 
   if (form && formMsg) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      const btn = form.querySelector('button[type="submit"]');
+      var btn = form.querySelector('button[type="submit"]');
       if (btn) {
         btn.disabled = true;
         btn.textContent = 'Sending…';
       }
 
       /* Encode form data for Formspree / similar endpoint */
-      const data = new FormData(form);
-      const action = form.getAttribute('action');
+      var data = new FormData(form);
+      var action = form.getAttribute('action');
 
       if (!action || action === '#') {
         formMsg.textContent =
