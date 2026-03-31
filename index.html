@@ -89,8 +89,37 @@
             <article class="card">
               <h3>security-workflows</h3>
               <p>
-                Detection triage workflow now maps alert intake to automated IOC
-                extraction and analyst disposition decisions.
+                Detection triage workflow maps alert intake to automated extraction,
+                then keeps operator-led validation and disposition explicit.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="engineering-notes">
+        <div class="container">
+          <h2>Engineering Notes</h2>
+          <div class="grid">
+            <article class="card">
+              <h3>Why intentionally simple</h3>
+              <p>
+                The public implementation favors small CLI tools and markdown-defined workflows
+                so behavior can be reviewed quickly without infrastructure overhead.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Constraint-aware design</h3>
+              <p>
+                Current scope is a local execution slice. Incident scoring, external integrations,
+                and orchestration are intentionally deferred until operational need is clear.
+              </p>
+            </article>
+            <article class="card">
+              <h3>What this proves</h3>
+              <p>
+                It demonstrates reproducible extraction and workflow mapping while preserving
+                human-in-the-loop decisions for escalation quality.
               </p>
             </article>
           </div>
