@@ -3,157 +3,265 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="About Muath Yousef — Cybersecurity Engineer focused on security automation, workflows, and practical tooling." />
+  <meta name="description" content="About Muath Yousef — Cybersecurity Solutions Engineer specializing in sovereign security architecture, AI-driven defense, and cloud security." />
   <title>About — Muath Yousef</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Space+Mono:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --black:#08090b; --deep:#0d0f13; --surface:#111318; --surface-2:#161b22;
+      --border:rgba(180,140,60,0.18); --border-dim:rgba(255,255,255,0.06);
+      --gold:#c9a84c; --gold-bright:#e8c96a; --gold-dim:rgba(201,168,76,0.15); --gold-glow:rgba(201,168,76,0.08);
+      --blue:#3a8fff; --blue-holo:#00d4ff; --blue-dim:rgba(58,143,255,0.12);
+      --text:#e8edf5; --text-2:#9aa3b2; --text-3:#5a6475; --success:#2ecc71;
+      --font-display:'Syne',sans-serif; --font-mono:'Space Mono',monospace; --font-body:'DM Sans',sans-serif;
+      --max-w:1080px; --nav-h:68px; --radius:8px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:var(--font-body);background:var(--black);color:var(--text);line-height:1.7;font-size:16px;overflow-x:hidden;}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.35;}
+    h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-0.03em;line-height:1.15;}
+    a{color:var(--gold);text-decoration:none;transition:color 0.2s;}
+    a:hover{color:var(--gold-bright);}
+    ul{list-style:none;}
+    .container{width:100%;max-width:var(--max-w);margin-inline:auto;padding-inline:1.75rem;}
+    main{padding-top:var(--nav-h);}
+    .site-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);background:rgba(8,9,11,0.82);backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid var(--border);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:100%;}
+    .nav-brand{font-family:var(--font-mono);font-size:0.85rem;color:var(--text);font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;gap:0.5rem;}
+    .nav-brand .brand-mark{width:28px;height:28px;border:1.5px solid var(--gold);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:var(--gold);}
+    .nav-links{display:flex;align-items:center;gap:2.25rem;}
+    .nav-links a{font-family:var(--font-mono);font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-2);transition:color 0.2s;}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold-bright);}
+    .nav-cta{padding:0.45rem 1.1rem;border:1px solid var(--border);border-radius:4px;color:var(--gold)!important;transition:background 0.2s,border-color 0.2s!important;}
+    .nav-cta:hover{background:var(--gold-dim);border-color:var(--gold)!important;}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+    .nav-toggle span{display:block;width:22px;height:1.5px;background:var(--text-2);transition:transform 0.2s,opacity 0.2s;}
+    .page-hero{padding:4rem 0 3.5rem;position:relative;border-bottom:1px solid var(--border-dim);overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;top:-40%;right:-5%;width:600px;height:600px;background:radial-gradient(circle,rgba(201,168,76,0.06) 0%,transparent 65%);pointer-events:none;}
+    .page-hero-inner{position:relative;z-index:1;}
+    .breadcrumb{font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.5rem;}
+    .breadcrumb a{color:var(--text-3);} .breadcrumb a:hover{color:var(--gold);} .breadcrumb span{color:var(--gold);}
+    .page-hero h1{font-size:clamp(2.2rem,5vw,3.5rem);font-weight:800;margin-bottom:1rem;}
+    .page-hero .subtitle{font-size:1.05rem;color:var(--text-2);max-width:560px;font-weight:300;line-height:1.8;}
+    section{padding:4rem 0;}
+    section+section{border-top:1px solid var(--border-dim);}
+    .section-eyebrow{font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem;display:flex;align-items:center;gap:0.6rem;}
+    .section-eyebrow::before{content:'//';color:var(--text-3);}
+    .section-title{font-size:clamp(1.4rem,3vw,2rem);font-weight:700;color:var(--text);margin-bottom:1rem;}
+    .about-intro{display:grid;grid-template-columns:1fr 320px;gap:4rem;align-items:start;margin-bottom:4rem;}
+    .about-bio p{color:var(--text-2);margin-bottom:1.1rem;font-size:0.97rem;line-height:1.85;font-weight:300;}
+    .about-bio p strong{color:var(--text);font-weight:500;}
+    .about-bio p:last-child{margin-bottom:0;}
+    .identity-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;position:sticky;top:calc(var(--nav-h) + 1.5rem);}
+    .id-header{margin-bottom:1.5rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border-dim);}
+    .id-name{font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:0.25rem;}
+    .id-title{font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);}
+    .id-row{display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid var(--border-dim);}
+    .id-row:last-of-type{border-bottom:none;}
+    .id-label{font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);}
+    .id-value{font-size:0.82rem;color:var(--text-2);}
+    .id-value a{color:var(--gold);font-size:0.82rem;}
+    .status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--success);margin-right:0.4rem;}
+    .exp-list{display:flex;flex-direction:column;gap:0;}
+    .exp-item{display:grid;grid-template-columns:120px 1fr;gap:0 2rem;padding:2rem 0;position:relative;}
+    .exp-item+.exp-item{border-top:1px solid var(--border-dim);}
+    .exp-date{font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.06em;color:var(--text-3);padding-top:0.25rem;text-align:right;line-height:1.5;}
+    .exp-date .year{font-size:0.9rem;color:var(--gold);font-weight:700;display:block;}
+    .exp-org{font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem;}
+    .exp-role{font-family:var(--font-display);font-size:1.05rem;font-weight:700;color:var(--text);margin-bottom:0.6rem;}
+    .exp-desc{font-size:0.88rem;color:var(--text-2);line-height:1.75;font-weight:300;margin-bottom:0.85rem;}
+    .exp-highlights{display:flex;flex-direction:column;gap:0.4rem;}
+    .exp-highlight{display:flex;align-items:flex-start;gap:0.6rem;font-size:0.84rem;color:var(--text-2);line-height:1.6;}
+    .exp-highlight::before{content:'→';color:var(--gold);flex-shrink:0;font-size:0.75rem;margin-top:0.15rem;}
+    .exp-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.85rem;}
+    .exp-tag{font-family:var(--font-mono);font-size:0.62rem;padding:0.2rem 0.55rem;border-radius:3px;background:var(--surface-2);border:1px solid var(--border-dim);color:var(--text-3);}
+    .skills-matrix{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:var(--border-dim);border:1px solid var(--border-dim);border-radius:var(--radius);overflow:hidden;}
+    .skill-group{background:var(--surface);padding:1.5rem;}
+    .skill-group-head{font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;padding-bottom:0.6rem;border-bottom:1px solid var(--border-dim);}
+    .skill-tags{display:flex;flex-wrap:wrap;gap:0.4rem;}
+    .skill-tag{font-family:var(--font-mono);font-size:0.68rem;padding:0.25rem 0.65rem;border-radius:3px;background:var(--surface-2);border:1px solid var(--border-dim);color:var(--text-2);transition:border-color 0.2s,color 0.2s;}
+    .skill-tag:hover{border-color:var(--gold);color:var(--gold);}
+    .approach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;}
+    .approach-card{background:var(--surface);border:1px solid var(--border-dim);border-radius:var(--radius);padding:1.75rem;transition:border-color 0.2s;}
+    .approach-card:hover{border-color:var(--border);}
+    .approach-num{font-family:var(--font-mono);font-size:0.65rem;color:var(--text-3);margin-bottom:0.75rem;letter-spacing:0.1em;}
+    .approach-card h3{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:0.5rem;}
+    .approach-card p{font-size:0.86rem;color:var(--text-2);line-height:1.7;font-weight:300;}
+    .site-footer{border-top:1px solid var(--border-dim);padding:1.75rem 0;}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+    .footer-brand{font-family:var(--font-mono);font-size:0.72rem;color:var(--text-3);letter-spacing:0.08em;}
+    .footer-brand span{color:var(--gold);}
+    .footer-links{display:flex;gap:1.75rem;}
+    .footer-links a{font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-3);transition:color 0.2s;}
+    .footer-links a:hover{color:var(--gold);}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+    .page-hero-inner>*{opacity:0;animation:fadeUp 0.6s ease forwards;}
+    .breadcrumb{animation-delay:0.05s;} .page-hero h1{animation-delay:0.15s;} .page-hero .subtitle{animation-delay:0.28s;}
+    @media(max-width:900px){.about-intro{grid-template-columns:1fr;gap:2rem;}.identity-card{position:static;}}
+    @media(max-width:768px){
+      .nav-links{display:none;}.nav-toggle{display:flex;}
+      .nav-links.open{display:flex;flex-direction:column;align-items:flex-start;position:absolute;top:var(--nav-h);left:0;right:0;background:rgba(8,9,11,0.97);border-bottom:1px solid var(--border);padding:1rem 0;gap:0;}
+      .nav-links.open li{width:100%;}.nav-links.open a{padding:0.8rem 1.75rem;display:block;width:100%;}
+      .exp-item{grid-template-columns:1fr;gap:0.35rem;}.exp-date{text-align:left;}
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav class="site-nav" aria-label="Main navigation">
     <div class="container nav-inner">
-      <a href="./index.html" class="nav-brand"><span>MY</span> / Muath Yousef</a>
+      <a href="./index.html" class="nav-brand">
+        <span class="brand-mark">MY</span>Muath Yousef
+      </a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" role="list">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./about.html">About</a></li>
+        <li><a href="./about.html" class="active">About</a></li>
         <li><a href="./projects.html">Work</a></li>
         <li><a href="./services.html">Services</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./contact.html" class="nav-cta">Contact</a></li>
       </ul>
     </div>
   </nav>
 
   <main>
 
-    <!-- Page header -->
-    <div class="page-header">
+    <div class="page-hero">
       <div class="container">
-        <h1>About</h1>
-        <p class="subtitle">Cybersecurity Engineer — security automation, workflows, and practical tooling.</p>
+        <div class="page-hero-inner">
+          <div class="breadcrumb"><a href="./index.html">Home</a> / <span>About</span></div>
+          <h1>About Me</h1>
+          <p class="subtitle">Cybersecurity Solutions Engineer — building sovereign-grade security systems at the intersection of architecture, automation, and intelligence.</p>
+        </div>
       </div>
     </div>
 
-    <!-- Bio & Skills -->
     <section>
       <div class="container">
-        <div class="about-grid">
-
-          <!-- Bio -->
+        <div class="about-intro">
           <div class="about-bio">
-            <p class="section-label">Background</p>
-            <p>
-              I am a Cybersecurity Engineer with a practical focus: building
-              systems that detect threats, automate responses, and reduce the
-              manual overhead that slows security teams down. My work lives at
-              the intersection of engineering and operations.
-            </p>
-            <p>
-              Over the years I have developed tooling, designed pipelines, and
-              built workflows that solve concrete problems — not exercises in
-              compliance theatre. I prefer working with clear requirements,
-              measurable outcomes, and code that can be read by the next
-              person on the team.
-            </p>
-            <p>
-              I am the architect of <strong>Project Synapse</strong>, a
-              framework for connecting security intelligence and operational
-              workflows into a coherent, maintainable system. Synapse
-              represents the accumulated thinking across many engagements and
-              is still in active development.
-            </p>
-            <p>
-              I am building toward <strong>Kyrie</strong> as a future brand
-              direction for independent security engineering and product work.
-              The operating structure is still in development.
-            </p>
+            <div class="section-eyebrow" style="margin-bottom:1.5rem;">Background</div>
+            <p>I'm a Cybersecurity Solutions Engineer with a deep focus on building systems that don't just detect threats — they understand them, respond to them, and evolve. My work spans cloud security, SIEM engineering, ML-driven anomaly detection, and sovereign-grade architecture design.</p>
+            <p>Over the past four years I've worked across SME security deployments, enterprise-scale architecture, hands-on penetration testing, and AI-integrated defense systems. Every engagement pushes me to think about security not as a product you buy but as a <strong>capability you engineer</strong>.</p>
+            <p>I'm the creator of <strong>Project Synapse</strong> — a multi-phase sovereign security engineering program that grew from a basic detection prototype into a national-scale architecture with six specialized domains: Vector, Umbra, Spectra, Holmes, Axiom, and Aegis. Each phase represents a distinct leap in capability and depth.</p>
+            <p>My academic foundation is a Bachelor's degree in Cybersecurity from Tafila Technical University (expected 2025), complemented by AWS certifications in Cloud, Architecture, Machine Learning, and AI — and ongoing Cisco CCNA training.</p>
+            <p>Outside technical work, I serve as <strong>Vice Chair of IEEE Jordan Section (SMC TTU)</strong>, organizing cybersecurity awareness and education programs for university communities — because the next generation of engineers needs better security instincts, not just better tools.</p>
           </div>
-
-          <!-- Skills -->
-          <div class="about-skills">
-            <p class="section-label">Technical Focus</p>
-
-            <div class="skill-group">
-              <h4>Security Engineering</h4>
-              <div class="tag-list">
-                <span class="tag">Threat Detection</span>
-                <span class="tag">Incident Response</span>
-                <span class="tag">SIEM / SOAR</span>
-                <span class="tag">Detection Engineering</span>
-                <span class="tag">Threat Modeling</span>
-              </div>
+          <div class="identity-card">
+            <div class="id-header">
+              <div class="id-name">Mu'ath Yousef</div>
+              <div class="id-title">Cybersecurity Solutions Engineer</div>
             </div>
+            <div class="id-row"><span class="id-label">Status</span><span class="id-value"><span class="status-dot"></span>Available</span></div>
+            <div class="id-row"><span class="id-label">Location</span><span class="id-value">Amman, Jordan</span></div>
+            <div class="id-row"><span class="id-label">Remote</span><span class="id-value">Yes</span></div>
+            <div class="id-row"><span class="id-label">Email</span><span class="id-value"><a href="mailto:Muath.ysf@gmail.com">Muath.ysf@gmail.com</a></span></div>
+            <div class="id-row"><span class="id-label">LinkedIn</span><span class="id-value"><a href="https://linkedin.com/in/muath-altali" target="_blank">muath-altali</a></span></div>
+            <div class="id-row"><span class="id-label">GitHub</span><span class="id-value"><a href="https://github.com/Muath-Yousef" target="_blank">Muath-Yousef</a></span></div>
+            <div class="id-row"><span class="id-label">Focus</span><span class="id-value">Security Architecture</span></div>
+            <div class="id-row"><span class="id-label">Flagship</span><span class="id-value">Project Synapse</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="skill-group">
-              <h4>Automation &amp; Pipelines</h4>
-              <div class="tag-list">
-                <span class="tag">Security Automation</span>
-                <span class="tag">Workflow Design</span>
-                <span class="tag">CI/CD Security</span>
-                <span class="tag">Scripting</span>
-                <span class="tag">API Integration</span>
+    <section>
+      <div class="container">
+        <div class="section-eyebrow">Experience</div>
+        <h2 class="section-title">Professional Background</h2>
+        <div class="exp-list">
+          <div class="exp-item">
+            <div class="exp-date"><span class="year">2022</span>– Present</div>
+            <div class="exp-body">
+              <div class="exp-org">Freelance</div>
+              <div class="exp-role">Cybersecurity Solutions Engineer</div>
+              <p class="exp-desc">Designed and deployed tailored security architectures for SME clients — covering IAM hardening, SIEM deployment, vulnerability management, incident response, and security awareness programs.</p>
+              <div class="exp-highlights">
+                <div class="exp-highlight">Improved overall security posture by ~35% through IAM hardening, endpoint controls, and network segmentation</div>
+                <div class="exp-highlight">Conducted 40+ vulnerability assessments — reduced high-risk findings by up to 60% in first remediation cycles</div>
+                <div class="exp-highlight">Built ELK + ML SIEM pipelines cutting false-positive noise by 25–40%</div>
+                <div class="exp-highlight">Led incident response and RCA investigations, reducing repeat incidents by ~50%</div>
+                <div class="exp-highlight">Delivered 12+ security awareness workshops — improved phishing-resilience scores by 20–35%</div>
               </div>
+              <div class="exp-tags"><span class="exp-tag">ELK</span><span class="exp-tag">AWS</span><span class="exp-tag">ISO 27001</span><span class="exp-tag">Nessus</span><span class="exp-tag">Python</span></div>
             </div>
-
-            <div class="skill-group">
-              <h4>Tooling &amp; Languages</h4>
-              <div class="tag-list">
-                <span class="tag">Python</span>
-                <span class="tag">Bash</span>
-                <span class="tag">YAML / JSON</span>
-                <span class="tag">SQL</span>
-                <span class="tag">Git</span>
-                <span class="tag">Docker</span>
-                <span class="tag">Linux</span>
+          </div>
+          <div class="exp-item">
+            <div class="exp-date"><span class="year">2024</span></div>
+            <div class="exp-body">
+              <div class="exp-org">NCSCJO — MASAR Project</div>
+              <div class="exp-role">Penetration Tester</div>
+              <p class="exp-desc">Built and penetration-tested a Windows Server 2019 Active Directory environment simulating enterprise HR/Finance workloads. Executed multi-stage attacks and produced full governance-aligned risk reports.</p>
+              <div class="exp-highlights">
+                <div class="exp-highlight">Executed RDP/SMB exploitation, ZeroLogon, and PrintNightmare attack scenarios</div>
+                <div class="exp-highlight">Achieved privilege escalation using PowerView, PowerUp, and Mimikatz</div>
+                <div class="exp-highlight">Produced risk &amp; compliance report mapping gaps to ISO control categories</div>
               </div>
+              <div class="exp-tags"><span class="exp-tag">Active Directory</span><span class="exp-tag">Mimikatz</span><span class="exp-tag">PowerView</span><span class="exp-tag">ZeroLogon</span></div>
             </div>
-
-            <div class="skill-group">
-              <h4>Domains</h4>
-              <div class="tag-list">
-                <span class="tag">Network Security</span>
-                <span class="tag">Cloud Security</span>
-                <span class="tag">AppSec</span>
-                <span class="tag">IAM</span>
-                <span class="tag">Risk Assessment</span>
-              </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-date"><span class="year">2024</span></div>
+            <div class="exp-body">
+              <div class="exp-org">NCSCJO — Nashama Cyber Bootcamp</div>
+              <div class="exp-role">Cybersecurity Trainee</div>
+              <p class="exp-desc">Completed an intensive 4-month program covering SOC operations, cloud security, digital forensics, cryptography, and Red/Blue team operations with governance-aligned practices.</p>
+              <div class="exp-tags"><span class="exp-tag">SOC</span><span class="exp-tag">Digital Forensics</span><span class="exp-tag">Red/Blue Team</span><span class="exp-tag">Cryptography</span></div>
+            </div>
+          </div>
+          <div class="exp-item">
+            <div class="exp-date"><span class="year">2023</span>– Present</div>
+            <div class="exp-body">
+              <div class="exp-org">IEEE Jordan Section</div>
+              <div class="exp-role">Vice Chair — SMC TTU</div>
+              <p class="exp-desc">Organizing cybersecurity awareness and compliance-focused educational programs for university communities across Jordan.</p>
+              <div class="exp-tags"><span class="exp-tag">Leadership</span><span class="exp-tag">Security Awareness</span><span class="exp-tag">Education</span></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Approach -->
     <section>
       <div class="container">
-        <p class="section-label">Approach</p>
-        <h2 class="section-title">How I work</h2>
-        <div class="grid-3">
-          <div class="card">
-            <h3>Precision over volume</h3>
-            <p>Fewer, better-tuned detections beat alert floods. I optimize for signal-to-noise and actionable outcomes.</p>
-          </div>
-          <div class="card">
-            <h3>Engineer-first thinking</h3>
-            <p>Security controls are only useful if they can be maintained. I write code and documentation built to last.</p>
-          </div>
-          <div class="card">
-            <h3>Outcomes over process</h3>
-            <p>Compliance is a floor, not a ceiling. My work targets real risk reduction in real environments.</p>
-          </div>
+        <div class="section-eyebrow">Technical Stack</div>
+        <h2 class="section-title">Skills &amp; Tools</h2>
+        <div class="skills-matrix">
+          <div class="skill-group"><div class="skill-group-head">SIEM &amp; Detection</div><div class="skill-tags"><span class="skill-tag">Splunk</span><span class="skill-tag">ELK Stack</span><span class="skill-tag">Wazuh</span><span class="skill-tag">IBM QRadar</span><span class="skill-tag">OpenSearch</span><span class="skill-tag">Snort</span></div></div>
+          <div class="skill-group"><div class="skill-group-head">Cloud Security</div><div class="skill-tags"><span class="skill-tag">AWS GuardDuty</span><span class="skill-tag">CloudTrail</span><span class="skill-tag">Security Hub</span><span class="skill-tag">WAF</span><span class="skill-tag">IAM</span><span class="skill-tag">Azure (Fundamentals)</span></div></div>
+          <div class="skill-group"><div class="skill-group-head">Automation &amp; Dev</div><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">Bash</span><span class="skill-tag">PowerShell</span><span class="skill-tag">Kafka</span><span class="skill-tag">Apache Spark</span><span class="skill-tag">Docker</span></div></div>
+          <div class="skill-group"><div class="skill-group-head">Offensive Security</div><div class="skill-tags"><span class="skill-tag">Metasploit</span><span class="skill-tag">Mimikatz</span><span class="skill-tag">Burp Suite</span><span class="skill-tag">Nmap</span><span class="skill-tag">PowerView</span><span class="skill-tag">Nessus</span></div></div>
+          <div class="skill-group"><div class="skill-group-head">Incident Response</div><div class="skill-tags"><span class="skill-tag">TheHive</span><span class="skill-tag">Cortex</span><span class="skill-tag">EDR/XDR</span><span class="skill-tag">DLP</span><span class="skill-tag">NAC</span><span class="skill-tag">PAM</span></div></div>
+          <div class="skill-group"><div class="skill-group-head">Governance</div><div class="skill-tags"><span class="skill-tag">ISO 27001</span><span class="skill-tag">ISO 22301</span><span class="skill-tag">MITRE ATT&CK</span><span class="skill-tag">BC/DR</span><span class="skill-tag">Risk Assessment</span><span class="skill-tag">Compliance</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-eyebrow">Philosophy</div>
+        <h2 class="section-title">How I Think About Security</h2>
+        <div class="approach-grid">
+          <div class="approach-card"><div class="approach-num">01 /</div><h3>Engineer First, Not Vendor First</h3><p>Security is a capability you build, not a product you install. I design systems from first principles — what's the threat model, what's the detection logic, what's the response path?</p></div>
+          <div class="approach-card"><div class="approach-num">02 /</div><h3>Precision Over Volume</h3><p>Fewer, better-tuned detections beat alert floods every time. I optimize for signal-to-noise because analysts have finite attention and every false positive erodes trust in the system.</p></div>
+          <div class="approach-card"><div class="approach-num">03 /</div><h3>Offense Informs Defense</h3><p>Understanding attacker TTPs isn't optional. Synapse Vector exists because I believe you can't build a great defense without thinking like an adversary. Threat simulation is built into the architecture.</p></div>
+          <div class="approach-card"><div class="approach-num">04 /</div><h3>Governance as Foundation</h3><p>Security without governance is chaos. Every system I build is aligned to ISO 27001 control categories, documented with assumptions and constraints, and designed to survive the next audit.</p></div>
+          <div class="approach-card"><div class="approach-num">05 /</div><h3>Automation With Judgment</h3><p>Automation handles the repeatable; humans handle the ambiguous. I design clear handoff boundaries so automation accelerates analysts rather than replacing their critical thinking.</p></div>
+          <div class="approach-card"><div class="approach-num">06 /</div><h3>Sovereignty by Design</h3><p>In a world where data is power, who controls your security data matters. Synapse Sovereign was built on the premise that national-grade security requires national-grade data control.</p></div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span class="footer-brand">Muath Yousef</span>
-      <nav class="footer-links" aria-label="Footer navigation">
+      <span class="footer-brand"><span>MY</span> / Muath Yousef</span>
+      <nav class="footer-links">
         <a href="./about.html">About</a>
         <a href="./projects.html">Work</a>
         <a href="./services.html">Services</a>
@@ -162,6 +270,15 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open);
+      });
+    }
+  </script>
 </body>
 </html>
