@@ -13,21 +13,13 @@ SOC triage quality often depends on quickly isolating actionable indicators from
 - extracts **MD5/SHA1/SHA256-looking hashes**
 - deduplicates and prints a compact summary
 
-## Usage
+## Quick demo (1 command)
 
 ```bash
 python3 tools/tool-01/ioc_extractor.py tools/tool-01/examples/sample-alert.log
 ```
 
-## Example data
-
-- Input: `tools/tool-01/examples/sample-alert.log`
-- Expected output: `tools/tool-01/examples/expected-output.txt`
-- Validation matrix: `tools/examples/test_cases.md`
-
-## Validation
-
-Use the sample file to verify deterministic behavior:
+## Validation (2 commands)
 
 ```bash
 python3 tools/tool-01/ioc_extractor.py tools/tool-01/examples/sample-alert.log > /tmp/ioc_output.txt
@@ -35,6 +27,12 @@ diff -u tools/tool-01/examples/expected-output.txt /tmp/ioc_output.txt
 ```
 
 Expected result: no diff output.
+
+## Example data
+
+- Input: `tools/tool-01/examples/sample-alert.log`
+- Expected output: `tools/tool-01/examples/expected-output.txt`
+- Validation matrix: `tools/examples/test_cases.md`
 
 ## Edge cases and behavior
 
