@@ -63,10 +63,10 @@
         .pop() || '';
     }
 
-    document.querySelectorAll('.nav-links a, .site-nav a').forEach(function (a) {
+    document.querySelectorAll('.nav-links a').forEach(function (a) {
       var href = normalizeHref(a.getAttribute('href'));
       if (!href) { return; }
-      if (href === page || (href === 'index.html' && page === '')) {
+      if (href === page) {
         a.classList.add('active');
         a.setAttribute('aria-current', 'page');
       }
