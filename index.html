@@ -8,41 +8,31 @@
       content="Portfolio of Muath Yousef, Cybersecurity Engineer focused on practical security automation, workflow engineering, and delivery-safe implementation."
     />
     <title>Muath Yousef | Cybersecurity Engineer</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
-
-    <header class="site-header" id="home">
-      <div class="container nav-wrap">
-        <p class="brand">Muath Yousef</p>
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="site-nav"
-          aria-label="Open navigation"
-        >
-          Menu
+    <nav class="site-nav" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <a href="./index.html" class="nav-brand"><span>MY</span> / Muath Yousef</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
         </button>
-        <nav id="site-nav" class="site-nav" aria-label="Primary">
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Work</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+        <ul class="nav-links" role="list">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./projects.html">Work</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
       </div>
-    </header>
+    </nav>
 
     <main id="main-content">
       <section class="hero section">
         <div class="container">
-          <p class="eyebrow">Cybersecurity Engineer</p>
+          <p class="hero-label">Cybersecurity Engineer</p>
           <h1>I build practical security automation for real operations teams.</h1>
-          <p class="lead">
+          <p class="hero-desc">
             I design and implement security tooling, triage workflows, and
             hardened delivery pipelines for teams that need security outcomes
             without slowing engineering.
@@ -54,7 +44,7 @@
             <p><strong>Long-term direction:</strong> Kyrie as a future company direction, not a current operating business.</p>
           </div>
           <p>
-            <a href="#contact">Contact me</a> ·
+            <a href="./contact.html">Contact me</a> ·
             <a href="https://github.com/Muath-Yousef" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
           </p>
         </div>
@@ -78,7 +68,7 @@
       <section class="section" id="projects">
         <div class="container">
           <h2>Work</h2>
-          <div class="grid">
+          <div class="grid-3">
             <article class="card">
               <h3>Project Synapse</h3>
               <p>
@@ -109,7 +99,7 @@
           <p>
             Engagements are hands-on and scoped for measurable outcomes.
           </p>
-          <div class="grid">
+          <div class="grid-3">
             <article class="card">
               <h3>Security Automation Delivery</h3>
               <p>Build and ship practical automation for recurring detection and triage operations.</p>
@@ -124,7 +114,7 @@
             </article>
           </div>
           <p>
-            <a href="services.html">View service details</a>
+            <a href="./services.html">View service details</a>
           </p>
         </div>
       </section>
@@ -148,8 +138,14 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container">
-        <p>© <span id="current-year"></span> Muath Yousef. All rights reserved.</p>
+      <div class="container footer-inner">
+        <span class="footer-brand">© <span id="current-year"></span> Muath Yousef</span>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="./about.html">About</a>
+          <a href="./projects.html">Work</a>
+          <a href="./services.html">Services</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
       </div>
     </footer>
 

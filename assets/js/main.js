@@ -46,18 +46,29 @@
     });
   }
 
-  /* ----- Active nav link based on current page (multi-page) ----- */
+  /* ----- Active nav link based on current page (all nav patterns) ----- */
   (function setActiveLink() {
     var path = window.location.pathname;
     var page = path.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav-links a').forEach(function (a) {
-      var href = a.getAttribute('href');
-      if (
-        href === page ||
-        (page === '' && href === 'index.html') ||
-        (page === 'index.html' && href === 'index.html')
-      ) {
+
+    function normalizeHref(href) {
+      if (!href) { return ''; }
+      if (href.indexOf('#') === 0) { return ''; }
+      return href
+        .replace(/^\.\//, '')
+        .replace(/^\/+/, '')
+        .split('?')[0]
+        .split('#')[0]
+        .split('/')
+        .pop() || '';
+    }
+
+    document.querySelectorAll('.nav-links a, .site-nav a').forEach(function (a) {
+      var href = normalizeHref(a.getAttribute('href'));
+      if (!href) { return; }
+      if (href === page || (href === 'index.html' && page === '')) {
         a.classList.add('active');
+        a.setAttribute('aria-current', 'page');
       }
     });
   })();
