@@ -10,10 +10,17 @@ Each tool should have its own subdirectory with a focused scope and its own READ
 
 - solve a real operational need
 - keep dependencies minimal
-- document usage and limitations clearly
+- document usage, validation, and limitations clearly
 - prefer maintainable implementation over over-engineering
 
-Current status:
+## Current status
 
 - `tool-01/` — working IOC extractor utility
+- `examples/test_cases.md` — manual validation matrix for extraction behavior
 - `tool-02/` — reserved placeholder for the next lightweight utility
+
+## Limitations (current state)
+
+- Tooling is local and CLI-driven.
+- No external integrations or API-based enrichment are included yet.
+- This directory demonstrates a practical execution slice, not a full platform.

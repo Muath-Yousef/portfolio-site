@@ -31,3 +31,12 @@ The site presents a consistent account-level narrative across the main public re
 This is a static site with shared CSS and JavaScript assets in `assets/`.
 
 Open `index.html` directly for quick review, or serve the repository with any static file server during content updates.
+
+
+## Technical credibility notes
+
+To keep maturity claims realistic, this repository now documents explicit boundaries and trade-offs:
+
+- `docs/assumptions.md` — what the current public implementation assumes.
+- `docs/constraints.md` — what is intentionally out of scope and deferred.
+- `workflows/detection-triage-workflow.md` — operational considerations, including failure points and manual/automated boundaries.

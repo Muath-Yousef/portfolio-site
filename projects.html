@@ -122,6 +122,36 @@
       </div>
     </section>
 
+    <section>
+      <div class="container">
+        <p class="section-label">Engineering Notes</p>
+        <h2 class="section-title">Design choices behind the mini-system</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Focused pipeline slice</h3>
+            <p>
+              Current public artifacts show one practical path: raw alert text in,
+              normalized indicator extraction out, analyst decision next.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Constraints made explicit</h3>
+            <p>
+              Local CLI execution is intentional to keep verification fast and transparent.
+              Platform-scale concerns are documented as deferred scope.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Operational credibility</h3>
+            <p>
+              Workflow docs include assumptions, failure points, and manual handoff boundaries
+              so reviewers can see realistic operating conditions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Note on work visibility -->
     <section>
       <div class="container">

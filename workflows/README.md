@@ -18,10 +18,18 @@ Store workflow artifacts that define:
 - Separate detection logic from response execution when practical.
 - Include failure paths and retry/rollback considerations.
 
-## Expected Evolution
-
-As implementation matures, this folder should contain versioned workflow specifications and supporting references mapped to concrete SOC use cases.
-
 ## Current baseline workflow
 
-- `detection-triage-workflow.md`: initial SOC-oriented flow that references `tools/tool-01/ioc_extractor.py` for IOC extraction during triage.
+- `detection-triage-workflow.md`: SOC-oriented flow with automated IOC extraction and manual analyst validation.
+
+## Operational realism
+
+This repository intentionally documents operator decision points and real constraints:
+
+- extraction output is a triage aid, not a final verdict
+- workflow quality depends on input log quality
+- human review remains mandatory for escalation decisions
+
+## Expected evolution
+
+As implementation matures, this folder should contain versioned workflow specifications and supporting references mapped to concrete SOC use cases.
