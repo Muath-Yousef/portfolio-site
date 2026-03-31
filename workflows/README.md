@@ -22,6 +22,22 @@ Store workflow artifacts that define:
 
 - `detection-triage-workflow.md`: SOC-oriented flow with automated IOC extraction and manual analyst validation.
 
+## Real-World Use Cases
+
+- **Alert triage standardization:** provide a repeatable flow for intake, extraction, review, and disposition.
+- **Analyst onboarding:** document decision points so newer analysts can follow the same triage structure.
+- **Process improvement reviews:** identify where automation helps and where human validation must remain mandatory.
+
+### Who would use this
+
+- SOC leads defining triage process quality
+- security engineers implementing workflow automation
+- incident response teams documenting escalation logic
+
+### Problem this solves
+
+It turns informal analyst habits into a shared, reviewable workflow with clear handoff boundaries.
+
 ## Operational realism
 
 This repository intentionally documents operator decision points and real constraints:
@@ -33,3 +49,8 @@ This repository intentionally documents operator decision points and real constr
 ## Expected evolution
 
 As implementation matures, this folder should contain versioned workflow specifications and supporting references mapped to concrete SOC use cases.
+
+
+## Project Synapse alignment
+
+These artifacts provide the practical building blocks used in the broader [project-synapse](https://github.com/Muath-Yousef/project-synapse) direction.

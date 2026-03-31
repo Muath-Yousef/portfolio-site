@@ -19,6 +19,17 @@ Provide a lightweight SOC triage path for suspicious endpoint and network alerts
 
 ## Tool Integration
 
+
+## Quick demo
+
+Run in 2 commands:
+
+```bash
+python3 tools/tool-01/ioc_extractor.py tools/tool-01/examples/sample-alert.log > /tmp/ioc_output.txt
+cat /tmp/ioc_output.txt
+```
+
+
 ```bash
 python3 tools/tool-01/ioc_extractor.py tools/tool-01/examples/sample-alert.log
 ```

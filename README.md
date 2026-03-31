@@ -1,42 +1,49 @@
 # Muath Yousef Portfolio Site
 
-This repository contains the public portfolio website for Muath Yousef, a Cybersecurity Engineer focused on practical security architecture, automation, and delivery workflows.
+This repository contains the public portfolio website for Muath Yousef, a cybersecurity engineer focused on practical security automation, workflow engineering, and delivery-safe implementation.
 
-## Purpose
+## At a glance
 
-The site presents a consistent account-level narrative across the main public repositories:
+- **What I do:** build practical security systems for engineering and operations teams.
+- **What I build:** lightweight security tools, triage workflows, and implementation-ready architecture patterns.
+- **Primary direction:** [project-synapse](https://github.com/Muath-Yousef/project-synapse) (active architecture buildout).
+- **Future direction:** Kyrie as a future company path, not a current operating business.
 
-- **`project-synapse`** as the flagship evolving architecture direction
-- **`security-workflows`** for workflow, pipeline, and automation engineering artifacts
-- **`security-tools`** for lightweight, practical utilities
-- **Kyrie** as a future brand direction, not an already-operating company
+## Core links
 
-## Site Structure
+- Portfolio website: [portfolio-site](https://github.com/Muath-Yousef/portfolio-site)
+- Project Synapse: [project-synapse](https://github.com/Muath-Yousef/project-synapse)
+- Security workflows: [security-workflows](https://github.com/Muath-Yousef/security-workflows)
+- Security tools: [security-tools](https://github.com/Muath-Yousef/security-tools)
+- GitHub profile: [Muath-Yousef](https://github.com/Muath-Yousef)
 
-- `index.html` — consolidated one-page overview (Home / About / Work / Services / Contact)
-- `about.html` — background, technical focus, and working approach
-- `projects.html` — Project Synapse and repository-aligned work categories
-- `services.html` — professional service areas and engagement model
-- `contact.html` — contact channels and inquiry form
+## Site structure
 
-## Content Principles
+- `index.html` — one-page overview (home, work, services, contact)
+- `about.html` — technical focus and working approach
+- `projects.html` — Project Synapse positioning and repository map
+- `services.html` — practical service offerings and fit
+- `contact.html` — direct contact channels
 
-- Technical and professional tone
-- Clear architecture orientation
-- Honest maturity statements (no inflated claims)
-- Minimal, maintainable static implementation
+## Demo and review
 
-## Development Notes
+Open locally in one command:
 
-This is a static site with shared CSS and JavaScript assets in `assets/`.
+```bash
+python3 -m http.server 8080
+```
 
-Open `index.html` directly for quick review, or serve the repository with any static file server during content updates.
+Then browse to `http://localhost:8080`.
 
+## Content principles
+
+- practical, direct language
+- no fake production claims
+- explicit maturity boundaries
+- minimal static implementation for easy review
 
 ## Technical credibility notes
 
-To keep maturity claims realistic, this repository now documents explicit boundaries and trade-offs:
-
-- `docs/assumptions.md` — what the current public implementation assumes.
-- `docs/constraints.md` — what is intentionally out of scope and deferred.
-- `workflows/detection-triage-workflow.md` — operational considerations, including failure points and manual/automated boundaries.
+- `docs/assumptions.md` — what the current public implementation assumes
+- `docs/constraints.md` — what is intentionally out of scope and deferred
+- `workflows/detection-triage-workflow.md` — operational considerations and manual/automated boundaries
