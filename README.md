@@ -1,49 +1,49 @@
-# Muath Yousef Portfolio Site
+# Mu'ath Yousef — Cybersecurity Engineering Portfolio
 
-This repository contains the public portfolio website for Muath Yousef, a cybersecurity engineer focused on practical security automation, workflow engineering, and delivery-safe implementation.
+This repository contains the public portfolio of **Mu'ath Yousef**, a cybersecurity engineer focused on practical SOC engineering, security automation, and evidence-driven delivery.
 
-## At a glance
+## Professional direction
 
-- **What I do:** build practical security systems for engineering and operations teams.
-- **What I build:** lightweight security tools, triage workflows, and implementation-ready architecture patterns.
-- **Primary direction:** [project-synapse](https://github.com/Muath-Yousef/project-synapse) (active architecture buildout).
-- **Future direction:** Kyrie as a future company path, not a current operating business.
+The primary engineering initiative is **SOCRoot**, which evolved from Project Synapse. The public portfolio presents one coherent identity:
 
-## Core links
+- **SOCRoot** — the evolving product and service direction
+- **Project Synapse** — the public architecture and academic origin
+- **Mu'ath Yousef** — cybersecurity engineer and project lead
 
-- Portfolio website: [portfolio-site](https://github.com/Muath-Yousef/portfolio-site)
-- Project Synapse: [project-synapse](https://github.com/Muath-Yousef/project-synapse)
-- Security workflows: [security-workflows](https://github.com/Muath-Yousef/security-workflows)
-- Security tools: [security-tools](https://github.com/Muath-Yousef/security-tools)
-- GitHub profile: [Muath-Yousef](https://github.com/Muath-Yousef)
+Older references to Kyrie represent a superseded brand direction and should not be treated as a separate active business.
+
+## Selected work
+
+- [Project Synapse](https://github.com/Muath-Yousef/project-synapse) — public architecture, boundaries, and maturity roadmap
+- [SOCRoot Control Plane](https://github.com/Muath-Yousef/ide-agentic-engine) — portals, RBAC, client state, evidence, and observability
+- [SOCRoot Runtime](https://github.com/Muath-Yousef/Project-Synapse-SOC-Factory) — alert ingestion, triage, HITL, and runtime workflows
+- [DVTA Security Assessment](https://github.com/Muath-Yousef/Reports) — authorized grey-box lab assessment with 12 confirmed findings
+
+## Working principles
+
+- practical, direct communication
+- explicit maturity boundaries
+- human approval for sensitive actions
+- dry-run by default
+- traceable evidence and rollback
+- no raw client data sent to external AI providers
+- no unsupported production or client claims
 
 ## Site structure
 
-- `index.html` — one-page overview (home, work, services, contact)
-- `about.html` — technical focus and working approach
-- `projects.html` — Project Synapse positioning and repository map
-- `services.html` — practical service offerings and fit
-- `contact.html` — direct contact channels
+- index.html — professional overview
+- about.html — technical focus and working approach
+- projects.html — selected project portfolio
+- services.html — scoped engineering capabilities
+- contact.html — professional contact channels
+- docs/ — assumptions, constraints, and supporting material
 
-## Demo and review
+## Local review
 
-Open locally in one command:
+    python3 -m http.server 8080
 
-```bash
-python3 -m http.server 8080
-```
+Open http://localhost:8080.
 
-Then browse to `http://localhost:8080`.
+## Scope
 
-## Content principles
-
-- practical, direct language
-- no fake production claims
-- explicit maturity boundaries
-- minimal static implementation for easy review
-
-## Technical credibility notes
-
-- `docs/assumptions.md` — what the current public implementation assumes
-- `docs/constraints.md` — what is intentionally out of scope and deferred
-- `workflows/detection-triage-workflow.md` — operational considerations and manual/automated boundaries
+The site documents engineering work and project maturity. It does not claim that SOCRoot currently has proven production scale, a guaranteed SLA, or recurring commercial customers.
