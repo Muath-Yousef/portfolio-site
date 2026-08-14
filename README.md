@@ -15,8 +15,8 @@ Older references to Kyrie represent a superseded brand direction and should not 
 ## Selected work
 
 - [Project Synapse](https://github.com/Muath-Yousef/project-synapse) — public architecture, boundaries, and maturity roadmap
-- [SOCRoot Control Plane](https://github.com/Muath-Yousef/ide-agentic-engine) — portals, RBAC, client state, evidence, and observability
-- [SOCRoot Runtime](https://github.com/Muath-Yousef/Project-Synapse-SOC-Factory) — alert ingestion, triage, HITL, and runtime workflows
+- **SOCRoot Control Plane** — canonical portals, RBAC, client state, evidence, and observability; private during Git-history security review
+- **SOCRoot Runtime** — canonical alert ingestion, triage, HITL, and runtime workflows; private during Git-history security review
 - [DVTA Security Assessment](https://github.com/Muath-Yousef/Reports) — authorized grey-box lab assessment with 12 confirmed findings
 
 ## Working principles
